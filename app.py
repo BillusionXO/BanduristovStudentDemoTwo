@@ -1,3 +1,18 @@
+import datetime
+from pydantic import BaseModel
+
+
+class Order(BaseModel):
+    number : int
+    startDate : datetime.date
+    device : str
+    problemType : str
+    description: str
+    client : str
+    status : str
+
+repo = []
+
 from fastapi import FastAPI
  
 app = FastAPI()
